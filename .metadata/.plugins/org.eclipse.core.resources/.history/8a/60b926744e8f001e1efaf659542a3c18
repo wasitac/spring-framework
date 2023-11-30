@@ -1,0 +1,13 @@
+package himedia.project.ver1;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MemberController {
+	@RequestMapping(value="/join", method = RequestMethod.GET)
+	public String join() {
+		
+		return "join";
+	}
+}
