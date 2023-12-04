@@ -26,6 +26,16 @@ td {
 			</tr>
 		</thead>
 		<tbody>
+			<!-- [jsp] -->
+			<%-- 
+			<% List<Member> members = (List<Member>)request.getAttribute("members"); %>
+			<% for (Member m : members) { %>
+			<tr>
+				<td><%=m.getId() %></td>
+				<td><%=m.getName() %></td>
+			</tr>
+			<% } %> --%>
+			<!-- [jstl] -->
 			<c:forEach var="member" items="${members}">
 				<tr>
 					<td>${member.getId()}</td>

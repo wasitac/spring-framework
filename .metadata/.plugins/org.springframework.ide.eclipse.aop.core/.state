@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="spring-ver2-2"/>
+<aop-project name="spring-ver2_2"/>
+<aop-project name="spring-ver2_copy"/>
 <aop-project name="spring-ver1"/>
 <aop-project name="spring-ver2"/>
 </aop-reference-model>

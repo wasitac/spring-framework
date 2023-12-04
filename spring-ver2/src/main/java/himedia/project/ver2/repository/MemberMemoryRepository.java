@@ -1,15 +1,17 @@
 package himedia.project.ver2.repository;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
+
+import org.springframework.stereotype.Repository;
 
 import himedia.project.ver2.dto.Member;
 
+@Repository
 public class MemberMemoryRepository implements MemberRepository {
 
 	private static Map<Long, Member> store = new HashMap<Long, Member>();
@@ -30,7 +32,14 @@ public class MemberMemoryRepository implements MemberRepository {
 
 	@Override
 	public Optional<Member> findByName(String name) {
-		return null;
+		return store.values().stream().filter(new Predicate<Member>() {
+			@Override
+			public boolean test(Member v) {
+				return v.getName().equals(name);
+			}
+		}).findAny();
+//		return store.values().stream().filter(v -> v.getName().equals(name)).findAny();
+//		return null;
 	}
 
 	@Override
