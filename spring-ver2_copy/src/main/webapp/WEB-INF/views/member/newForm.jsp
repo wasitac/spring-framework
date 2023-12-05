@@ -9,7 +9,6 @@
 <body>
 	<% 
 	String context = request.getContextPath();
-	System.out.println("context : " + context);
 	%>
 	<h1>회원 가입</h1>
 	<!-- [과제] context 변수를 action 속성의 값에 사용 -->

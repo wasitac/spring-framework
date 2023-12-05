@@ -38,8 +38,8 @@ td {
 			<!-- [jstl] -->
 			<c:forEach var="member" items="${members}">
 				<tr>
-					<td>${member.getId()}</td>
-					<td>${member.getName()}</td>
+					<td>${member.id}</td>
+					<td>${member.name}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

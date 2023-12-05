@@ -162,7 +162,8 @@
 
       
       
-      <Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-ver2_copy" path="/ver2_copy" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver2_copy"/></Host>
+      <Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-ver2_copy" path="/ver2_copy" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver2_copy"/>
+      </Host>
     </Engine>
   </Service>
 </Server>

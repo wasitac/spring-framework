@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import himedia.project.ver2.dto.Member;
 import himedia.project.ver2.repository.MemberRepository;
@@ -36,16 +37,26 @@ private final MemberRepository repository;
 		return "redirect:/";
 	}
 
+//	@RequestMapping(value = "/list", method = RequestMethod.GET)
+//	public String MemberList(Model model) {
+//		List<Member> members = repository.findAll();
+//		model.addAttribute("members", members);
+//		return "member/memberList";
+//	}
+	
+	// Model 대신 ModelAndView 사용
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String list(Model model) {
+	public ModelAndView MemberList() {
 		List<Member> members = repository.findAll();
-		model.addAttribute("members", members);
-		return "member/memberList";
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("members", members);
+		mv.setViewName("member/memberList");
+		return mv;
 	}
 
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String search(@ModelAttribute Member member, Model model) {
-		Optional<Member> searchMember = null;
+		Optional<Member> searchMember = Optional.empty();
 		if(member.getId() != null)
 			searchMember = repository.findById(member.getId());
 		else if(!member.getName().isEmpty())
@@ -54,7 +65,6 @@ private final MemberRepository repository;
 			model.addAttribute("member", searchMember.get());
 		else
 			model.addAttribute("member", new Member());
-		
 		return "member/search";
 	}
 

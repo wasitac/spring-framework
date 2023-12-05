@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--   namespace=패키지경로 -->
+<mapper namespace="himedia.project.ver2.repository.MemberRepository">
+<!-- id=메서드명, useGeneratedKeys=자동증가하는키 여부, keyProperty 키 컬럼명 -->
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="himedia.project.ver2.dto.Member">
+		insert into member(name)
+		values (#{name})
+		<selectKey resultType="himedia.project.ver2.dto.Member" keyProperty="id" order="AFTER">
+			select * from member where id=(#{id})
+		</selectKey>
+	</insert>
+	<select id="findById" parameterType="Long" resultType="himedia.project.ver2.dto.Member">
+		select * from member where id=(#{id})
+	</select>
+	<select id="findByName" parameterType="String" resultType="himedia.project.ver2.dto.Member">
+		select * from member where name like '%${name}%' limit 1
+	</select>
+	<select id="findAll" resultType="himedia.project.ver2.dto.Member">
+		select * from member
+	</select>
+</mapper>

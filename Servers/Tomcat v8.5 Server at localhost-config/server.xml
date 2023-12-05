@@ -162,7 +162,8 @@
 
       
       
-      <Context docBase="spring-ver2_copy" path="/ver2_copy" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver2_copy"/></Host>
+      <Context docBase="spring-ver2_copy" path="/ver2_copy" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver2_copy"/>
+      </Host>
     </Engine>
   </Service>
 </Server>
