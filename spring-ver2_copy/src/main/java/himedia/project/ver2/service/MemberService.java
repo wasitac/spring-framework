@@ -21,8 +21,9 @@ public class MemberService {
 	
 	public Long join(Member member) {
 		System.out.println(member.getName());
-		repository.save(member);
-		return member.getId();
+		Long id = repository.save(member);
+		System.out.println(id);
+		return id;
 	}
 	
 	public Optional<Member> findId(Long id) {

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 
 import himedia.project.ver2.dto.Member;
 
-//@Repository
+@Repository
 public class MemberJdbcRepository implements MemberRepository{
 	
 //	// [방법 1] 생성자 DI
@@ -51,7 +51,7 @@ public class MemberJdbcRepository implements MemberRepository{
 	}
 	
 	@Override
-	public Member save(Member member) {
+	public Long save(Member member) {
 		// [매개변수 표시 문자] ?
 		String sql = "insert into member(name) values(?)";
 		Connection con = null;
@@ -81,10 +81,10 @@ public class MemberJdbcRepository implements MemberRepository{
 			// 자원해제
 			closeConnection(rs, pstmt, con);
 		}
-		return member;
+		return member.getId();
 	}
 
-	//[과제2] 구현
+// [과제 1] 없는 아이디 또는 이름 검색 시, 에러 해결
 	@Override
 	public Optional<Member> findById(Long id) {
 		// TODO Auto-generated method stub
@@ -115,7 +115,6 @@ public class MemberJdbcRepository implements MemberRepository{
 
 	@Override
 	public Optional<Member> findByName(String name) {
-		// TODO Auto-generated method stub
 		String sql = "select * from member where name like (?)";
 		Connection con = null;
 		PreparedStatement pstmt = null;

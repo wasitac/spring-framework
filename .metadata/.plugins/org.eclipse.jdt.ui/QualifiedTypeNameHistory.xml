@@ -3,11 +3,7 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="himedia.project.ver2.dto.Member"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="himedia.project.ver2.controller.MemberController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="himedia.project.ver2.repository.MemberJdbcRepository"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.PreparableStatement"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
@@ -18,7 +14,6 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
     <fullyQualifiedTypeName name="himedia.project.ver2.repository.MemberRepository"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.simple.SimpleJdbcInsert"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -26,6 +21,12 @@
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.ResultSetExtractor"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapperResultSetExtractor"/>
-    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 </qualifiedTypeNameHistroy>

@@ -33,7 +33,8 @@ private final MemberRepository repository;
 
 	@RequestMapping(value = "/new", method = RequestMethod.POST)
 	public String postNew(@ModelAttribute Member member) {
-		repository.save(member);
+		Long id = repository.save(member);
+		System.out.println("id >> " + id);
 		return "redirect:/";
 	}
 

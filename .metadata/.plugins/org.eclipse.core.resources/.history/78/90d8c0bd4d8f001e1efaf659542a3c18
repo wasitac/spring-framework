@@ -1,6 +1,0 @@
-package himedia.project.ver1;
-
-@Controller
-public class MemberController {
-	
-}

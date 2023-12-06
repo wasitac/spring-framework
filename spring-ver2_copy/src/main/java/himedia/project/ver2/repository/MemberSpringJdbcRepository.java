@@ -10,32 +10,34 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.RowMapperResultSetExtractor;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
-import org.springframework.stereotype.Repository;
 
 import himedia.project.ver2.dto.Member;
 
 //@Repository
 public class MemberSpringJdbcRepository implements MemberRepository{
 //	[방법 1] constructor DI
-	private final JdbcTemplate jdbcTemplate;
-	
-	@Autowired
-	public MemberSpringJdbcRepository(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+//	private final JdbcTemplate jdbcTemplate;
+//	
+//	@Autowired
+//	public MemberSpringJdbcRepository(JdbcTemplate jdbcTemplate) {
+//		this.jdbcTemplate = jdbcTemplate;
+//	}
 
 // [방법 2] field DI
 //	@Autowired
 //	private JdbcTemplate jdbcTemplate;
 	
 // [방법 3] root-context 주석 처리 하고 의존성 주입하기
+	private final JdbcTemplate jdbcTemplate;
 	
+	@Autowired
+	public MemberSpringJdbcRepository(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
 	
 	@Override
-	public Member save(Member member) {
+	public Long save(Member member) {
 		// DB연결, 쿼리문 생성
 		SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate)
 				.withTableName("member")
@@ -48,23 +50,28 @@ public class MemberSpringJdbcRepository implements MemberRepository{
 		Number key = insertActor.executeAndReturnKey(parameters);
 		
 		member.setId(key.longValue());
-		return member;
+		return member.getId();
 		}
 
+//	@Override
+//	public Optional<Member> findById(Long id) {
+//		String sql = "select * from member where id=" + id;
+//		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class))
+//				.stream()
+//				.findAny();
+//	}
 	@Override
 	public Optional<Member> findById(Long id) {
-		String sql = "select * from member where id=" + id;
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class))
-				.stream()
-				.findAny();
+		String sql = "select * from member where id = ?";
+		List<Member> result = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class), id); 
+		return result.stream().findAny();
 	}
 
 	@Override
 	public Optional<Member> findByName(String name) {
-		String sql = "select * from member where name like '" + name + "'";
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class))
-				.stream()
-				.findAny();
+		String sql = "select * from member where name like ?";
+		List<Member> result = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class), name); 
+		return result.stream().findAny();
 	}
 
 	@Override
