@@ -12,7 +12,7 @@
 	%>
 	<h1>회원 가입</h1>
 	<!-- [과제] context 변수를 action 속성의 값에 사용 -->
-<%-- 	<form action="${pageContexkt.request.contextPath}/member/new" method="POST"> --%>
+<%-- 	<form action="${pageContext.request.contextPath}/member/new" method="POST"> --%>
 	<form action="<%= context %>/member/new" method="POST">
 <!-- 	<form action="" method="POST"> -->
 		<label for="name">이름 : </label>

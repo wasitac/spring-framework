@@ -58,14 +58,17 @@ private final MemberRepository repository;
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String search(@ModelAttribute Member member, Model model) {
 		Optional<Member> searchMember = Optional.empty();
+		
 		if(member.getId() != null)
 			searchMember = repository.findById(member.getId());
 		else if(!member.getName().isEmpty())
 			searchMember = repository.findByName(member.getName());
+		
 		if(searchMember.isPresent())
 			model.addAttribute("member", searchMember.get());
 		else
 			model.addAttribute("member", new Member());
+		
 		return "member/search";
 	}
 

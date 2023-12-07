@@ -163,7 +163,7 @@
       
       
       
-      <Context docBase="springLMS-v01" path="/v01" reloadable="true" source="org.eclipse.jst.jee.server:springLMS-v01"/></Host>
+      <Context docBase="spring-ver3" path="/ver3" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver3"/><Context docBase="unhappymarket" path="/unhappymarket" reloadable="true" source="org.eclipse.jst.jee.server:unhappymarket"/></Host>
     </Engine>
   </Service>
 </Server>

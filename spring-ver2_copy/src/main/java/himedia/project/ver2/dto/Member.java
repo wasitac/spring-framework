@@ -1,5 +1,8 @@
 package himedia.project.ver2.dto;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("Member")
 public class Member {
 	private String name;
 	private Long id;

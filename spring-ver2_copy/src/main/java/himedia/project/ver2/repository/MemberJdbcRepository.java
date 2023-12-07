@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 
 import himedia.project.ver2.dto.Member;
 
-@Repository
+//@Repository
 public class MemberJdbcRepository implements MemberRepository{
 	
 //	// [방법 1] 생성자 DI

@@ -21,8 +21,20 @@
 		<property name="mapperLocations" value="classpath:/ver2/mapper/*.xml" />
 		<property name="configLocation" value="classpath:/ver2/config/member-config.xml" />
 	</bean>
-<!-- 	<bean id="repository" class="org.mybatis.spring.mapper.MapperFactoryBean"> -->
-<!-- 		<property name="mapperInterface" value="himedia.project.ver2.repository.MemberRepository" /> -->
-<!-- 		<property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
-<!-- 	</bean> -->
+	<bean id="repository" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="himedia.project.ver2.repository.MemberRepository" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="item" class="himedia.project.ver2.domain.Item">
+<!-- 		<property name="id" value="100" /> -->
+		<property name="id">
+			<value>100</value>
+		</property>
+<!-- 		<property name="name" value="root-context.xml"/> -->
+		<property name="name">
+			<value>root-context.xml</value>
+		</property>
+		<constructor-arg value="[constructor] root-context.xml"/>
+	</bean>
 </beans>
