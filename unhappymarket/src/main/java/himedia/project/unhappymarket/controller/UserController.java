@@ -38,9 +38,12 @@ public class UserController {
 	
 	@PostMapping("/login")
 	public String login(@ModelAttribute User user, Model model) {
+		System.out.println(user.getName());
 		Optional<User> userAccount = service.isUser(user);
+		System.out.println(userAccount.get().getName());
 		if(userAccount.isPresent())
 			model.addAttribute(userAccount.get());
+		
 		return "/user/loginResult";
 	}
 }

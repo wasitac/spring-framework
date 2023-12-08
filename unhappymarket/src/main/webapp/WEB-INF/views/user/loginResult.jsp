@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>로그인 성공여부</h1>
-	<h2>${name}</h2>
+	<h2>${param.name}</h2>
 </body>
 </html>

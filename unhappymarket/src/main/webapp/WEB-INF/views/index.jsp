@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<label>비밀번호 : </label>
-			<input type="password" name="name"/>
+			<input type="password" name="password"/>
 		</div>
 		<input type="submit" value="로그인"/>
 	</form>

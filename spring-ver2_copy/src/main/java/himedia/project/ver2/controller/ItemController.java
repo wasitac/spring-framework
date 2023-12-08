@@ -6,21 +6,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import himedia.project.ver2.domain.Item;
+import himedia.project.ver2.repository.ItemRepository;
 
 @Controller
 public class ItemController {
-	private final Item item;
+	private final ItemRepository repository;
 	
 	@Autowired
-	public ItemController(Item item) {
-		this.item = item;
+	public ItemController(ItemRepository repository) {
+		this.repository = repository;
 		System.out.println("ItemController 실행");
-		System.out.println("itemController item.getName() >> " + item.getName());
 	}
 	
-	@GetMapping("/id")
+	@GetMapping("/test") 
 	@ResponseBody
-	public String id() {
-		return item.getName();
+	public String test() {		
+		Item item = repository.getRootBean();
+		Item hello = repository.getServletBean();
+		
+		System.out.println("root-context id >> " + item.getId());
+		System.out.println("root-context name >> " + item.getName());
+		System.out.println("servlet-context id >> " + hello.getId());
+		System.out.println("servlet-context name >> " + hello.getName());
+		return "test";
 	}
 }
