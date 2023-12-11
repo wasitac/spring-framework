@@ -77,5 +77,7 @@ D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jsp
 \spring-ver2\src\main\java
 D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\62612791.index
 \spring-ver2_4\src\main\java
+D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\30690820.index
+\spring-ver3-2\src\main\java
 D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1348006435.index
 \unhappymarket\src\main\java
