@@ -8,14 +8,17 @@ import org.springframework.stereotype.Service;
 
 import himedia.project.ver3.dto.Item;
 import himedia.project.ver3.repository.ItemRepository;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class ItemService {
 	private final ItemRepository repository;
 	
-	@Autowired
+//	@Autowired
 	public ItemService(ItemRepository repository) {
 		this.repository = repository;
+		log.info("[log] service 실행");
 	}
 	
 	// 저장

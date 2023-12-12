@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 상세</title>
-<%@ include file="../common/url.jsp"%>
+<%@ include file="../url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- START : header -->
-	<jsp:include page="../common/header.jsp"/>
+	<jsp:include page="../itemHeader.jsp"/>
 
 	<!-- START : container -->
 	<div id="container" class="container" style="max-width: 600px">
@@ -63,5 +63,5 @@
 	</div>
 
 	<!-- START : footer -->
-<jsp:include page="../common/footer.jsp"/>
+<jsp:include page="../itemFooter.jsp"/>
 </html>

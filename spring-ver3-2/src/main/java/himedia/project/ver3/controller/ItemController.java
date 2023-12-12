@@ -1,6 +1,7 @@
 package himedia.project.ver3.controller;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import himedia.project.ver3.dto.Item;
 import himedia.project.ver3.service.ItemService;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 @RequestMapping("/store/items")
 public class ItemController {
 	
@@ -24,12 +27,14 @@ public class ItemController {
 	@Autowired
 	public ItemController(ItemService service) {
 		this.service = service;
+		log.info("[log] controller 실행");
 	}
 	
 	// 상품 목록
 	@GetMapping()
 	public String items(Model model) {
-		model.addAttribute("items", service.findAll());
+		List<Item> items = service.findAll();
+		model.addAttribute("items", items);
 		return "store/items";
 	}
 	
@@ -64,9 +69,9 @@ public class ItemController {
 	
 	// 상품 수정
 	@PostMapping("/{id}/edit")
-	public String postEdit(@PathVariable("id") Long id, 
-			@ModelAttribute Item item, Model model) {
+	public String postEdit(@PathVariable("id") Long id, Item item) {
 		service.updateItem(id, item);
-		return "redirect:/store/items/"+id;
+		return "redirect:/store/items/" + item.getId();
+//		return "redirect:/store/items/"+id;
 	}
 }

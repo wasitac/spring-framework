@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!doctype html>
 <html lang="ko" class="h-100" data-bs-theme="auto">
@@ -14,7 +14,7 @@
 	css : /ver3/resources -> 변수명 : resPath
 	uri : /ver3 ->변수명 : context
  -->
-<%@ include file="/WEB-INF/views/common/url.jsp"%>
+<%@ include file="/WEB-INF/views/url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 <link href="${resPath}/css/cover.css" rel="stylesheet">
 
@@ -26,9 +26,12 @@
 			<div>
 				<h3 class="float-md-start mb-0">Cover</h3>
 				<nav class="nav nav-masthead justify-content-center float-md-end">
-					<a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a> <a
-						class="nav-link fw-bold py-1 px-0" href="#"
-					>Features</a> <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+					<a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"
+					>Home</a> 
+					<a class="nav-link fw-bold py-1 px-0" href="#"
+					>Features</a> 
+					<a class="nav-link fw-bold py-1 px-0" href="#"
+					>Contact</a>
 				</nav>
 			</div>
 		</header>

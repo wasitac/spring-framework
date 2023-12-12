@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 수정 폼</title>
-<%@ include file="../common/url.jsp"%>
+<%@ include file="../url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- START : header -->
-	<jsp:include page="../common/header.jsp" />
+	<jsp:include page="../itemHeader.jsp" />
 
 	<!-- START : container -->
 	<div id="container" class="container" style="max-width: 600px">
@@ -54,8 +54,10 @@
 			<div class="row my-2">
 				<div class="col">
 					<button type="button" class="btn btn-outline-dark btn-lg w-100"
-						onclick="location.href='${context}store/items/${id}'"
-					>취소</button>
+						onclick="history.go(-1);"
+						>취소</button>
+<%-- 						onclick="location.href='${context}store/items/${id}'" --%>
+<!-- 						onclick="history.back()" -->
 				</div>
 				<div class="col">
 					<button type="submit" class="btn btn-secondary btn-lg w-100">저장</button>
@@ -65,6 +67,6 @@
 	</div>
 
 	<!-- START : footer -->
-	<jsp:include page="../common/footer.jsp" />
+	<jsp:include page="../itemFooter.jsp" />
 </body>
 </html>

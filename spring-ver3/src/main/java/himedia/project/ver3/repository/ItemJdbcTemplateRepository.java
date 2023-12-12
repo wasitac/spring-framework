@@ -1,5 +1,7 @@
 package himedia.project.ver3.repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,8 +10,8 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
@@ -22,6 +24,19 @@ public class ItemJdbcTemplateRepository implements ItemRepository{
 	@Autowired
 	public ItemJdbcTemplateRepository(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+	private RowMapper<Item> itemRowMapper(){
+		return new RowMapper<Item>() {
+			@Override
+			public Item mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Item item = new Item();
+				item.setId(rs.getLong("id"));
+				item.setName(rs.getString("name"));
+				item.setPrice(rs.getInt("price"));
+				item.setQuantity(rs.getInt("quantity"));
+				return item;
+			}
+		};
 	}
 	
 	// 저장
@@ -44,22 +59,22 @@ public class ItemJdbcTemplateRepository implements ItemRepository{
 	@Override
 	public Optional<Item> findById(Long id) {
 		String sql = "select * from item where id= ?";
-		List<Item> result = jdbcTemplate.query(sql,  new BeanPropertyRowMapper<Item>(Item.class), id);
+		List<Item> result = jdbcTemplate.query(sql, itemRowMapper(), id);
 		return result.stream().findAny();
 	}
 
 	// 검색 : 상품명
 	@Override
 	public Optional<Item> findByName(String name) {
-		String sql = "select * from item where name=?";
-		List<Item> result = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Item>(Item.class), name);
+		String sql = "select * from item where name like ?";
+		List<Item> result = jdbcTemplate.query(sql, itemRowMapper(), name);
 		return result.stream().findAny();
 	}
 
 	// 검색 : 전체
 	@Override
 	public List<Item> findAll() {
-		return jdbcTemplate.query("select * from item", new BeanPropertyRowMapper<Item>(Item.class));
+		return jdbcTemplate.query("select * from item", itemRowMapper());
 	}
 	
 	// 수정

@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 목록</title>
-<%@ include file="../common/url.jsp"%>
+<%@ include file="../url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- START : header -->
-	<jsp:include page="../common/header.jsp"/>
+	<jsp:include page="../itemHeader.jsp"/>
 
 	<!-- START : container -->
 	<div class="container" style="max-width: 600px">
@@ -31,10 +31,10 @@
 			<c:forEach var="item" items="${items}">
 				<tr>
 					<td>
-						<a href="/ver3/store/items/${item.id}">${item.id}</a>
+						<a href="${context}store/items/${item.id}">${item.id}</a>
 					</td>
 					<td>
-						<a href="/ver3/store/items/${item.id}">${item.name}</a>
+						<a href="${context}store/items/${item.id}">${item.name}</a>
 					</td>
 					<td>${item.price}</td>
 					<td>${item.quantity}</td>
@@ -50,6 +50,6 @@
 	</div>
 
 	<!-- START : footer -->
-	<jsp:include page="../common/footer.jsp"/>
+	<jsp:include page="../itemFooter.jsp"/>
 </body>
 </html>

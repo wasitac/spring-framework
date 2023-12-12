@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import himedia.project.ver3.dto.Item;
 import himedia.project.ver3.service.ItemService;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 @RequestMapping("/store/items")
 public class ItemController {
 	
@@ -68,5 +70,16 @@ public class ItemController {
 			@ModelAttribute Item item, Model model) {
 		service.updateItem(id, item);
 		return "redirect:/store/items/"+id;
+	}
+	
+	// 상품 검색
+	@GetMapping("/search")
+	public String search(@ModelAttribute String name) {
+		Item item = new Item();
+		Optional<Item> result = service.findName(name);
+		if (result.isPresent()) {
+			item = result.get();
+			log.info(item.getId().toString());}
+		return "store/items/" + item.getId();
 	}
 }
