@@ -4,7 +4,6 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--   namespace=패키지경로 -->
 <mapper namespace="himedia.project.ver2.repository.MemberRepository">
-
 <!-- id=메서드명, useGeneratedKeys=자동증가하는키 여부, keyProperty 키 컬럼명 -->
 <!-- 	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="Member"> -->
 <!-- 		insert into member(name) -->

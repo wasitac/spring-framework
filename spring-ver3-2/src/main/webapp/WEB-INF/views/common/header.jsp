@@ -20,8 +20,8 @@
 				</form>
 
 				<div class="text-end">
-					<button type="button" class="btn btn-outline-light me-2" onclick="location.href='${context}user/signIn'">Login</button>
-					<button type="button" class="btn btn-warning" onclick="location.href='${context}user/signUp'">Sign-up</button>
+					<button type="button" class="btn btn-outline-light me-2" onclick="location.href='${context}user/logIn'">Login</button>
+					<button type="button" class="btn btn-warning" onclick="location.href='${context}user/logUp'">Sign-up</button>
 				</div>
 			</div>
 		</div>

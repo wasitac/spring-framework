@@ -220,7 +220,7 @@ grant codeBase "file:${catalina.home}/webapps/host-manager/-" {
 };
 
 
-// You can assign additional permissions to particular web applications by
+// You can aslog additional permissions to particular web applications by
 // adding additional "grant" entries here, based on the code base for that
 // application, /WEB-INF/classes/, or /WEB-INF/lib/ jar files.
 //

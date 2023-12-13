@@ -1,18 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
+<%@ include file="../common/url.jsp"%>
 <meta charset="UTF-8">
 <title>test</title>
-<link href="${resPath}/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="${resPath}/css/bootstrap.min.css" rel="stylesheet" />
 <style type="text/css">
-.col{
- background-color: #ff0;
+.col {
+	background-color: #ff0;
 }
 </style>
 </head>
 <body>
+	<h1>test.jsp</h1>
+	<h2>${name}</h2>
 	<div class="container text=center">
 		<div class="row">
 			<div class="col">1</div>

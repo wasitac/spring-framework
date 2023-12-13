@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import himedia.project.ver3.service.ItemService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("store/user")
 public class UserController {
 //	private final UserService service;
 //	
@@ -19,14 +19,14 @@ public class UserController {
 //		this.service = service;
 //	}
 	
-	@GetMapping("/signIn")
-	public String signIn() {
-		return "/user/signIn";
+	@GetMapping("/logIn")
+	public String logIn() {
+		return "/user/logIn";
 	}
 
 	//	@PostMapping()
-//	public String signIn(@ModelAttribute User user, Model model) {
-//		service.signIn(user);
+//	public String logIn(@ModelAttribute User user, Model model) {
+//		service.logIn(user);
 //		model.addAttribute(user);
 //	}
 }

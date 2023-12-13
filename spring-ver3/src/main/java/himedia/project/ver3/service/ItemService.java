@@ -29,7 +29,7 @@ public class ItemService {
 	}
 	
 	// 검색 : 상품명
-	public Optional<Item> findName(String name) {
+	public List<Item> findName(String name) {
 		return repository.findByName(name);
 	}
 	
@@ -39,8 +39,8 @@ public class ItemService {
 	}
 	
 	// 수정
-	public Item updateItem(Long id, Item updateItem) {
-		return repository.update(id, updateItem);
+	public void updateItem(Long id, Item updateItem) {
+		repository.update(id, updateItem);
 	}
 	
 }

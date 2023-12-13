@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 수정 폼</title>
-<%@ include file="../url.jsp"%>
+<%@ include file="../common/url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- START : header -->
-	<jsp:include page="../itemHeader.jsp" />
+	<jsp:include page="../common/header.jsp" />
 
 	<!-- START : container -->
 	<div id="container" class="container" style="max-width: 600px">
@@ -65,6 +65,6 @@
 	</div>
 
 	<!-- START : footer -->
-	<jsp:include page="../itemFooter.jsp" />
+	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

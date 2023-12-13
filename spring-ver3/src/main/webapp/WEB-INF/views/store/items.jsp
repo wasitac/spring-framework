@@ -5,13 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 목록</title>
-<%@ include file="../url.jsp"%>
+<%@ include file="../common/url.jsp"%>
 <link href="${resPath}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- START : header -->
-	<jsp:include page="../itemHeader.jsp"/>
-
+	<!-- 액션태그는 실행 결과를 가져오기 떄문에 url.jsp를 사용할 수 없어서 이렇게 쓰려면 헤더파일에서 또 만들어야함 -->
+<%-- 	<jsp:include page="../header/itemHeader.jsp"/> --%>
+	<%@ include file="../header/itemHeader.jsp" %>
 	<!-- START : container -->
 	<div class="container" style="max-width: 600px">
 		<div class="py-5 text-center">
@@ -50,6 +51,7 @@
 	</div>
 
 	<!-- START : footer -->
-	<jsp:include page="../itemFooter.jsp"/>
+<%-- 	<jsp:include page="../footer/itemFooter.jsp"/> --%>
+	<%@ include file="../footer/itemFooter.jsp" %>
 </body>
 </html>

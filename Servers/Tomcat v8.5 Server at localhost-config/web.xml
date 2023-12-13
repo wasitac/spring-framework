@@ -55,7 +55,7 @@
   <!--                       is no welcome file in this directory?  [false] -->
   <!--                       WARNING: Listings for directories with many    -->
   <!--                       entries can be slow and may consume            -->
-  <!--                       significant proportions of server resources.   -->
+  <!--                       logificant proportions of server resources.   -->
   <!--                                                                      -->
   <!--   output              Output buffer size (in bytes) when writing     -->
   <!--                       resources to be served.  [2048]                -->
@@ -784,7 +784,7 @@
     </mime-mapping>
     <mime-mapping>
         <extension>asc</extension>
-        <mime-type>application/pgp-signature</mime-type>
+        <mime-type>application/pgp-logature</mime-type>
     </mime-mapping>
     <mime-mapping>
         <extension>asf</extension>
@@ -2987,7 +2987,7 @@
     </mime-mapping>
     <mime-mapping>
         <extension>p7s</extension>
-        <mime-type>application/pkcs7-signature</mime-type>
+        <mime-type>application/pkcs7-logature</mime-type>
     </mime-mapping>
     <mime-mapping>
         <extension>p8</extension>
@@ -3577,7 +3577,7 @@
     </mime-mapping>
     <mime-mapping>
         <extension>sig</extension>
-        <mime-type>application/pgp-signature</mime-type>
+        <mime-type>application/pgp-logature</mime-type>
     </mime-mapping>
     <mime-mapping>
         <extension>sil</extension>

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import himedia.project.ver3.dto.Item;
 
-@Repository
+//@Repository
 public class ItemJdbcTemplateRepository implements ItemRepository{
 	private final JdbcTemplate jdbcTemplate;
 	
@@ -65,10 +65,10 @@ public class ItemJdbcTemplateRepository implements ItemRepository{
 
 	// 검색 : 상품명
 	@Override
-	public Optional<Item> findByName(String name) {
+	public List<Item> findByName(String name) {
 		String sql = "select * from item where name like ?";
-		List<Item> result = jdbcTemplate.query(sql, itemRowMapper(), name);
-		return result.stream().findAny();
+		List<Item> result = jdbcTemplate.query(sql, itemRowMapper(), "%"+name+"%");
+		return result;
 	}
 
 	// 검색 : 전체
@@ -79,10 +79,9 @@ public class ItemJdbcTemplateRepository implements ItemRepository{
 	
 	// 수정
 	@Override
-	public Item update(Long id, Item updateItem) {
+	public void update(Long id, Item updateItem) {
 		String sql = "update item set name=?, price=?, quantity=? where id=?";
 		jdbcTemplate.update(sql, updateItem.getName(), updateItem.getPrice(), updateItem.getQuantity(), id);
-		return updateItem;
 	}
 
 }

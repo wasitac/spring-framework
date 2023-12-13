@@ -12,14 +12,14 @@
     <meta name="generator" content="Hugo 0.118.2">
     <title>Signin Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/log-in/">
 
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
    <%@ include file="/WEB-INF/views/common/url.jsp"%>
-	<link href="/ver3/resources/css/signIn.css" rel="stylesheet">
+	<link href="/ver3/resources/css/logIn.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -102,7 +102,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="sign-in.css" rel="stylesheet">
+    <link href="log-in.css" rel="stylesheet">
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -157,10 +157,10 @@
     </div>
 
     
-<main class="form-signin w-100 m-auto">
+<main class="form-login w-100 m-auto">
   <form>
     <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Please log in</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="SearchDialog">
-		<item key="PREVIOUS_PAGE" value="org.eclipse.search.internal.ui.text.TextSearchPage"/>
+		<item key="PREVIOUS_PAGE" value="org.eclipse.mylyn.tasks.ui.search.page"/>
 	</section>
 	<section name="Search">
 		<list key="Search.processedPageIds">
@@ -45,7 +45,7 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="/ver3"/>
+			<item key="textPattern" value="appServlet"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -55,12 +55,14 @@
 		</section>
 		<section name="EXTENSIONS">
 			<item key="0" value="*"/>
+			<item key="1" value="spring-ver3-2"/>
+			<item key="2" value=""/>
 		</section>
 		<section name="HISTORY1">
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="ver3"/>
+			<item key="textPattern" value="logIn"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -72,7 +74,7 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="../common/footer.jsp"/>
+			<item key="textPattern" value="sign"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -84,10 +86,10 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="../common/header.jsp"/>
+			<item key="textPattern" value="footer/"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
-				<item value="*"/>
+				<item value="spring-ver3-2"/>
 			</list>
 			<list key="workingSets">
 			</list>
@@ -96,7 +98,7 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="../common/url.jsp"/>
+			<item key="textPattern" value="&lt;jsp:&lt;%@ include file=&quot;../footer/itemFooter.jsp&quot; %&gt;jsp&quot; /&gt;"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -108,7 +110,7 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="../itemFooter.jsp"/>
+			<item key="textPattern" value="&lt;%@ &lt;%@ include file=&quot;../footer/itemFooter.jsp&quot; %&gt;jsp&quot; %&gt;"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -117,10 +119,10 @@
 			</list>
 		</section>
 		<section name="HISTORY6">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="itemId"/>
+			<item key="textPattern" value="&lt;%@ include page=&quot;../footer/itemFooter.jsp&quot; %&gt;"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -129,10 +131,10 @@
 			</list>
 		</section>
 		<section name="HISTORY7">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="getitem"/>
+			<item key="textPattern" value="include page=&quot;../footer/itemFooter."/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -144,7 +146,7 @@
 			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="ItemId"/>
+			<item key="textPattern" value="&lt;jsp:include page=&quot;../footer/itemFooter.jsp&quot;/&gt;"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -153,10 +155,10 @@
 			</list>
 		</section>
 		<section name="HISTORY9">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="component-scan"/>
+			<item key="textPattern" value="../footer/itemfooter.jsp"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -165,10 +167,10 @@
 			</list>
 		</section>
 		<section name="HISTORY10">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="org.springframework-version"/>
+			<item key="textPattern" value="../itemFooter.jsp"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -177,10 +179,10 @@
 			</list>
 		</section>
 		<section name="HISTORY11">
-			<item key="ignoreCase" value="true"/>
+			<item key="ignoreCase" value="false"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="ver2"/>
+			<item key="textPattern" value="../header/itemFooter.jsp"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -197,10 +199,13 @@
 	</section>
 	<section name="ReplaceDialog2">
 		<list key="replace_with">
-			<item value="../itemFooter.jsp"/>
-			<item value="../itemHeader.jsp"/>
-			<item value="../url.jsp"/>
-			<item value="id"/>
+			<item value="log"/>
+			<item value="&lt;%@ include file=&quot;../footer/itemFooter.jsp&quot; %&gt;"/>
+			<item value="&lt;%@ include page=&quot;../footer/itemFooter.jsp&quot; %&gt;"/>
+			<item value="../footer/itemFooter.jsp"/>
+			<item value="../footer/itemfooter.jsp"/>
+			<item value="../header/itemHeader.jsp"/>
+			<item value="../header/itemFooter.jsp"/>
 		</list>
 	</section>
 	<section name="">

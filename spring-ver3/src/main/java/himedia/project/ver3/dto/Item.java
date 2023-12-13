@@ -13,7 +13,6 @@ public class Item {
 	public Item() {}
 
 	public Item(String name, Integer price, Integer quantity) {
-		System.out.println("dto 생성생성생성자 실행");
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
