@@ -39,8 +39,8 @@ public class ItemService {
 	}
 	
 	// 수정
-	public void updateItem(Long id, Item updateItem) {
-		repository.update(id, updateItem);
+	public int updateItem(Long id, Item updateItem) {
+		return repository.update(id, updateItem);
 	}
 	
 }

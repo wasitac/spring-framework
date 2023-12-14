@@ -83,33 +83,4 @@ public class ItemController {
 		model.addAttribute("items", result);
 		return "store/items";
 	}
-	
-	// http://localhost:8080/ver3/store/path?name=hello
-	@GetMapping("/path")
-	public String pathRequest(String name) {
-		String url = UriComponentsBuilder.fromPath("/store/test")
-				.queryParam("name", name)
-				.toUriString();
-		log.info("name : {}", name);
-		return "redirect:" + url;
-	}
-	
-	@GetMapping("/test")
-	public String test(String name, Model model) {
-		model.addAttribute("name", name);
-		return "store/test";
-	}
-//	@GetMapping("/path")
-//	public String pathRequest(String name) throws UnsupportedEncodingException {
-//		String encodedName = URLEncoder.encode(name, "UTF-8");
-//		log.info("name : {}", name);
-//		return "redirect:/store/test?name=" + encodedName;
-//	}
-//	
-//	@GetMapping("/test")
-//	public String test(String name, Model model) throws UnsupportedEncodingException{
-//		String decodedName = URLDecoder.decode(name, "UTF-8");
-//		model.addAttribute("name", decodedName);
-//		return "store/test";
-//	}
 }

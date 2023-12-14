@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import himedia.project.ver3.dto.Item;
 
-//@Repository
+@Repository
 public class ItemJdbcTemplateRepository implements ItemRepository{
 	private final JdbcTemplate jdbcTemplate;
 	
@@ -79,9 +79,9 @@ public class ItemJdbcTemplateRepository implements ItemRepository{
 	
 	// 수정
 	@Override
-	public void update(Long id, Item updateItem) {
+	public int update(Long id, Item updateItem) {
 		String sql = "update item set name=?, price=?, quantity=? where id=?";
-		jdbcTemplate.update(sql, updateItem.getName(), updateItem.getPrice(), updateItem.getQuantity(), id);
+		return jdbcTemplate.update(sql, updateItem.getName(), updateItem.getPrice(), updateItem.getQuantity(), id);
 	}
 
 }
