@@ -3,6 +3,8 @@
 <aop-project name="spring-ver3-2"/>
 <aop-project name="spring-ver3-3"/>
 <aop-project name="spring-ver3-4"/>
+<aop-project name="spring-ver3-5"/>
+<aop-project name="studybite"/>
 <aop-project name="spring-ver2_copy"/>
 <aop-project name="spring-ver3"/>
 </aop-reference-model>

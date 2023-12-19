@@ -3,20 +3,21 @@ package himedia.project.ver3.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import himedia.project.ver3.dto.Item;
 import himedia.project.ver3.repository.ItemRepository;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class ItemService {
 	private final ItemRepository repository;
 	
-	@Autowired
-	public ItemService(ItemRepository repository) {
-		this.repository = repository;
-	}
+//	@Autowired
+//	public ItemService(ItemRepository repository) {
+//		this.repository = repository;
+//	}
 	
 	// 저장
 	public void saveItem(Item item) {
@@ -41,6 +42,11 @@ public class ItemService {
 	// 수정
 	public int updateItem(Long id, Item updateItem) {
 		return repository.update(id, updateItem);
+	}
+	
+	// 삭제
+	public void deleteItem(Long id) {
+		repository.delete(id);
 	}
 	
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@
 		<div class="py-5 text-center">
 			<h2>상품 수정 폼</h2>
 		</div>
-		<form action="${context}store/items/${item.id}/edit" method="post">
+		<form>
 			<div class="row my-2">
 				<div class="col-2">
 					<label for="id" class="form-label fw-bolder">상품 ID</label>

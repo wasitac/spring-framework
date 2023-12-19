@@ -26,6 +26,7 @@
 					<th>상품명</th>
 					<th>가격</th>
 					<th>수량</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody class="table-group-divider">
@@ -39,6 +40,11 @@
 					</td>
 					<td>${item.price}</td>
 					<td>${item.quantity}</td>
+					<td>
+						<form action="${context}store/items/${item.id}/delete" method="post">
+							<input type="image" src="${resPath}/img/cross.png" alt="삭제"/>
+						</form>
+					</td>
 				</tr>
 			</c:forEach>
 			</tbody>

@@ -3,24 +3,24 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="himedia.project.ver3.repository.ItemRepository">
-	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="Item">
-		insert into item(name, price, quantity)
-		values (#{name}, #{price}, #{quantity})
-	</insert>
-	<select id="findById" parameterType="Long" resultType="Item">
-		select * from item where id=(#{id})
-	</select>
-	<select id="findByName" parameterType="String" resultType="Item">
-		select * from item where name like #{name}
-	</select>
-	<select id="findAll" resultType="Item">
-		select * from item
-	</select>
-	<update id="update" parameterType="Item">
-		update item set 
-		name=#{updateItem.name}, 
-		price=#{updateItem.price}, 
-		quantity=#{updateItem.quantity} 
-		where id=#{id}
-	</update>
+<!-- 	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="Item"> -->
+<!-- 		insert into item(name, price, quantity) -->
+<!-- 		values (#{name}, #{price}, #{quantity}) -->
+<!-- 	</insert> -->
+<!-- 	<select id="findById" parameterType="Long" resultType="Item"> -->
+<!-- 		select * from item where id=(#{id}) -->
+<!-- 	</select> -->
+<!-- 	<select id="findByName" parameterType="String" resultType="Item"> -->
+<!-- 		select * from item where name like #{name} -->
+<!-- 	</select> -->
+<!-- 	<select id="findAll" resultType="Item"> -->
+<!-- 		select * from item -->
+<!-- 	</select> -->
+<!-- 	<update id="update" parameterType="Item"> -->
+<!-- 		update item set  -->
+<!-- 		name=#{updateItem.name},  -->
+<!-- 		price=#{updateItem.price},  -->
+<!-- 		quantity=#{updateItem.quantity}  -->
+<!-- 		where id=#{id} -->
+<!-- 	</update> -->
 </mapper>

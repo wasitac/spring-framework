@@ -163,7 +163,7 @@
       
       
       
-      <Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-ver3-4" path="/ver3-4" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver3-4"/><Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-ver3" path="/ver3" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver3"/></Host>
+      <Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\fullstack\workspace-framework\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-ver3" path="/ver3" reloadable="true" source="org.eclipse.jst.jee.server:spring-ver3"/></Host>
     </Engine>
   </Service>
 </Server>

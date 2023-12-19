@@ -18,20 +18,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import himedia.project.ver3.dto.Item;
+import himedia.project.ver3.mapper.MemberMapper;
 import himedia.project.ver3.service.ItemService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @Slf4j
 @RequestMapping("/store")
+@RequiredArgsConstructor
 public class ItemController {
 	
 	private final ItemService service;
 	
-	@Autowired
-	public ItemController(ItemService service) {
-		this.service = service;
-	}
+//	@Autowired
+//	public ItemController(ItemService service) {
+//		this.service = service;
+//	}
 	
 	// 상품 목록
 	@GetMapping("/items")
@@ -56,7 +59,7 @@ public class ItemController {
 	
 	// 상품 등록
 	@PostMapping("/items/add")
-	public String postAdd(@ModelAttribute Item item, Model model) {
+	public String postAdd(@ModelAttribute("item") Item item, Model model) {
 		service.saveItem(item);
 		return "redirect:/store/items/"+item.getId();
 	}
@@ -82,5 +85,12 @@ public class ItemController {
 		List<Item> result = service.findName(search);
 		model.addAttribute("items", result);
 		return "store/items";
+	}
+	
+	// 상품 삭제
+	@PostMapping("/items/{id}/delete")
+	public String delete(@PathVariable("id") Long id) {
+		service.deleteItem(id);
+		return "redirect:/store/items";
 	}
 }
